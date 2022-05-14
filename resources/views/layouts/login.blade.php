@@ -22,16 +22,16 @@
 <body>
     <header>
         <div id = "head">
-        <h1><a><img src="images/logo.png"></a></h1>
-            <div id="">
-                <div id="">
-                    <p>〇〇さん<img src="images/arrow.png"></p>
-                <div>
+        <a href="/top"><img src="images/logo.png"></a>
+            <div id="accordion" class="accordion-container">
+            <h1 class="accordion-title js-accordion-title"><img src="images/arrow.png">〇〇さん</h1>
+              <div class="accordion-content">
                 <ul>
                     <li><a href="/top">ホーム</a></li>
                     <li><a href="/profile">プロフィール</a></li>
                     <li><a href="/logout">ログアウト</a></li>
                 </ul>
+              </div>
             </div>
         </div>
     </header>
@@ -58,7 +58,7 @@
     </div>
     <footer>
     </footer>
-    <script src="JavaScriptファイルのURL"></script>
-    <script src="JavaScriptファイルのURL"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/accordion.js"></script></script>
 </body>
 </html>

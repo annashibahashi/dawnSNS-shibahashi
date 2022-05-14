@@ -1,22 +1,125 @@
 @charset "utf-8";
-html{
-}
-body{
-}
+
+html {}
+
+body {}
+
 /* header */
-header{
-    background:#3C4767;
+header {
+    position: relative;
+    z-index: 100;
+    background: #3C4767;
+    height: 66px;
 }
 
 /* main content */
-#row{
+#row {
     display: flex;
     flex-flow: row wrap;
 }
-#container{
+
+#container {
     flex: 0 0 80%;
 }
-#side-bar{
+
+#side-bar {
     flex: 0 0 19%;
     border-left: 1px solid #6C6C6C;
+}
+
+/*アコーディオンメニュー*/
+#head {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 40%;
+}
+
+.accordion-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 0;
+    width: 100%;
+    border: 1px solid #3C4767;
+    border-top: none;
+    outline: 0;
+    cursor: pointer
+}
+
+
+.accordion-container .accordion-title {
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 1.625em 0.625em 0.625em 4em;
+    font-size: 1.00em;
+    font-weight: normal;
+    color: #fff;
+    background: #3C4767;
+    cursor: pointer;
+}
+
+.accordion-container .accordion-title:hover,
+.accordion-container .accordion-title:active,
+.accordion-container .content-entry.open .accordion-title {
+    background-color: #3C4767;
+    color: white;
+}
+
+.accordion-container .accordion-title:hover i:before,
+.accordion-container .accordion-title:hover i:active,
+.accordion-container .content-entry.open i {
+    color: white;
+}
+
+.accordion-title {
+    position: relative;
+}
+
+.accordion-title:after {
+    content: "";
+    position: absolute;
+    right: 25px;
+    top: 38%;
+    transition: all 0.2s ease-in-out;
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-top: solid 2px #fff;
+    border-right: solid 2px #fff;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.accordion-title.open:after {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 45%;
+}
+
+.accordion-content {
+    display: none;
+    text-align: center;
+}
+
+.accordion-container {
+    width: 250px;
+    height: auto;
+}
+
+.accordion-content li {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #000;
+    list-style-type: none;
+    padding: 20px 10px;
+    border-bottom: 1px solid #000;
+    background-color: #fff;
+}
+
+.accordion-content li:hover {
+    background-color: red;
 }
