@@ -46,7 +46,7 @@ class LoginController extends Controller
             // ログインが成功したら、トップページへ
             //↓ログイン条件は公開時には消すこと
             if(Auth::attempt($data)){
-                return redirect('/top');
+                return redirect('/top')->with('name',$data['username'],'follow',$data['follow'],'follower',$data['follower']);
             }
         }
         return view("auth.login");
@@ -55,5 +55,13 @@ class LoginController extends Controller
     public function top(){
         return view('posts.index');
     }
+
+    public function logout(Request $request){
+        Session::flush();
+        Auth::logout();
+        return redirect('/login');
+    }
+
+
 
 }
