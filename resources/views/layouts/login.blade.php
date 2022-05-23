@@ -24,7 +24,7 @@
         <div id = "head">
         <a href="/top"><img src="images/logo.png"></a>
             <div id="accordion" class="accordion-container">
-            <h1 class="accordion-title js-accordion-title"><img src="images/arrow.png">〇〇さん</h1>
+            <h1 class="accordion-title js-accordion-title"><img src="images/arrow.png">{{session('name')}}さん</h1>
               <div class="accordion-content">
                 <ul>
                     <li><a href="/top">ホーム</a></li>
@@ -41,19 +41,19 @@
         </div >
         <div id="side-bar">
             <div id="confirm">
-                <p>〇〇さんの</p>
+                <p>{{session('name')}}さんの</p>
                 <div>
                 <p>フォロー数</p>
-                <p>〇〇名</p>
+                <p>{{session('follow')}}名</p>
                 </div>
-                <p class="btn"><a href="">フォローリスト</a></p>
+                <p class="btn"><a href="/follow-list">フォローリスト</a></p>
                 <div>
                 <p>フォロワー数</p>
-                <p>〇〇名</p>
+                <p>{{session('follower')}}名</p>
                 </div>
-                <p class="btn"><a href="">フォロワーリスト</a></p>
+                <p class="btn"><a href="/follower-list">フォロワーリスト</a></p>
             </div>
-            <p class="btn"><a href="">ユーザー検索</a></p>
+            <p class="btn"><a href="/search">ユーザー検索</a></p>
         </div>
     </div>
     <footer>
