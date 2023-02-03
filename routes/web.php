@@ -33,11 +33,27 @@ Route::get('/added', 'Auth\RegisterController@added');
 Route::get('/top','PostsController@index');
 
 Route::get('/profile','UsersController@profile');
+Route::get('/other-profile/{id}','UsersController@otherProfile');
+Route::post('/update','UsersController@update');
 
-Route::get('/search','UsersController@index');
+Route::get('/search','UsersController@search');
+Route::post('/search','UsersController@search');
 
-Route::get('/follow-list','PostsController@index');
-Route::get('/follower-list','PostsController@index');
+Route::get('/follow-list','FollowsController@followList');
+Route::get('/follower-list','FollowsController@followerList');
+
+Route::post('/follow','FollowsController@follow');
+Route::post('/unfollow','FollowsController@unfollow');
+
+Route::post('/create','PostsController@create');
+Route::get('/post/{id}/delete','PostsController@delete');
+Route::post('/post/update','PostsController@update');
+
+Route::get('/test','PostsController@test');
+
+
+
+
 
 
 //ログアウト後のページ

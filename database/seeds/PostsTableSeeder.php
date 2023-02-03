@@ -17,7 +17,7 @@ class PostsTableSeeder extends Seeder
             'mail' => '111@gmail.com',
             'password' => bcrypt('password'),
             'bio' => 'りんご',
-            'images' => 'A.png',
+            'images' => 'a.png',
         ]);
 
         DB::table('users')->insert([
@@ -51,6 +51,6 @@ class PostsTableSeeder extends Seeder
             'bio' => 'すいか',
             'images' => 'e.png',
         ]);
-           //
+
     }
 }
